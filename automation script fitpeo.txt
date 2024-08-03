@@ -38,17 +38,13 @@ public class Sample {
         Thread.sleep(2000);
 
         //To set the value to 820
-        driver.findElement(By.xpath("//input[@id=':r0:']")).click(); 
+         driver.findElement(By.xpath("//input[@id=':r0:']")).click(); 
         Thread.sleep(2000);
         driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
+        driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys("0");  
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys("820");        
-        Thread.sleep(2000);
-    
+
          //To validate the slider value to 560
         driver.findElement(By.xpath("//input[@id=':r0:']")).click(); 
         Thread.sleep(2000);
