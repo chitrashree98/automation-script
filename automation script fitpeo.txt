@@ -13,39 +13,31 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class Sample {
 
     public static void main(String[] args) throws InterruptedException {
-        // Set the path for the ChromeDriver executable if not set in system properties
+        // Setting the path for the ChromeDriver
        
         WebDriver driver = new ChromeDriver();
         driver.get("https://fitpeo.com/");
         
-        // Resize current window to the set dimension
+        // Resizing the current window to maximize
         driver.manage().window().maximize();
         Thread.sleep(2000);
 
-        // Click the element using XPath
+        //click on the revenue calculator
         driver.findElement(By.xpath("/html/body/div[1]/div/header/div/div[3]/div[6]/a/div")).click();
         Thread.sleep(2000);
 
-        // Cast the driver to JavascriptExecutor
+        //scroll down
         JavascriptExecutor js = (JavascriptExecutor) driver;
-
-        // Scroll down by a certain amount (e.g., 300 pixels)
         js.executeScript("window.scrollBy(0, 300);");
-        
         Thread.sleep(2000);
 
-        // Click on the element after scrolling
-       // driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[2]/div/div/span[1]/span[3]")).click();
-       // Thread.sleep(2000);
-
-        // Find the slider and move it
+        //click on the slider and move it
         WebElement slider = driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[2]/div/div/span[1]/span[3]"));
         Actions move = new Actions(driver);
         move.dragAndDropBy(slider, 95-1, 0).perform();
-      int targetValue = 820;
         Thread.sleep(2000);
 
-        // Send keys to the input field
+//To set the value to 820
 driver.findElement(By.xpath("//input[@id=':r0:']")).click(); 
 Thread.sleep(2000);
 driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
@@ -69,51 +61,33 @@ Thread.sleep(2000);
 //driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys("560");        
 //Thread.sleep(2000);
 
-
-   // Example for another input field (replace ID and XPath accordingly)
-        driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[2]/div/div/div/div/input")).clear();
-        Thread.sleep(2000);
-        driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[1]/div[2]/div/div/div/div/input")).sendKeys("560");        
-        Thread.sleep(2000);
-        
-        
-//        WebElement anotherInputField = driver.findElement(By.id(":r0:")); // Correct ID needed
-//        anotherInputField.clear();
-
-//        anotherInputField.sendKeys("560");
-//        Thread.sleep(2000);
-
-        // Scroll down
+        // Scroll down 
         js.executeScript("window.scrollBy(0, 400);");
         Thread.sleep(2000);
 
-        // Click the checkbox
+        // Click the CPT-99091 checkbox
         WebElement checkbox = driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/div[1]/label/span[1]/input"));
         checkbox.click();
         Thread.sleep(2000); 
-        // Click the checkbox
+
+        // Click the CPT-99453 checkbox
         driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/div[2]/label/span[1]/input")).click();
         Thread.sleep(2000);
         
-        
-        // Click the checkbox
-    driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/div[3]/label/span[1]/input")).click();
-    Thread.sleep(2000);
+        // Click the CPT-99454 checkbox
+        driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/div[3]/label/span[1]/input")).click();
+        Thread.sleep(2000);
     
-
-    // Scroll down
-    js.executeScript("window.scrollBy(0, 700);");
-    Thread.sleep(3000);
+      // Scroll down
+         js.executeScript("window.scrollBy(0, 700);");
+        Thread.sleep(3000);
      
-        
-      
-
-        // Click the final element
+        // Click the CPT-99474 checkbox
         WebElement finalElement = driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/div[8]/label/span[1]/input"));
         finalElement.click();
         Thread.sleep(4000);
 
-        // Final scroll (if needed)
+        // Final scroll
        // js.executeScript("window.scrollBy(0, 100);");
 
         // Close the driver
