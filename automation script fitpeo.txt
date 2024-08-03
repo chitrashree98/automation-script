@@ -13,12 +13,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 public class Sample {
 
     public static void main(String[] args) throws InterruptedException {
-        // Setting the path for the ChromeDriver
-       
+
+     // Set the path for the ChromeDrive
         WebDriver driver = new ChromeDriver();
         driver.get("https://fitpeo.com/");
         
-        // Resizing the current window to maximize
+        // Resize the current window to maximize
         driver.manage().window().maximize();
         Thread.sleep(2000);
 
@@ -37,29 +37,41 @@ public class Sample {
         move.dragAndDropBy(slider, 95-1, 0).perform();
         Thread.sleep(2000);
 
-//To set the value to 820
-driver.findElement(By.xpath("//input[@id=':r0:']")).click(); 
-Thread.sleep(2000);
-driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
-Thread.sleep(2000);
-driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
-Thread.sleep(2000);
-driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
-Thread.sleep(2000);
-driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys("820");        
-Thread.sleep(2000);
+        //To set the value to 820
+        driver.findElement(By.xpath("//input[@id=':r0:']")).click(); 
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys("820");        
+        Thread.sleep(2000);
+    
+         //To validate the slider value to 560
+        driver.findElement(By.xpath("//input[@id=':r0:']")).click(); 
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys("560");        
+        Thread.sleep(2000);
 
-// To validate the slider value to 560
-//driver.findElement(By.xpath("//input[@id=':r0:']")).click(); 
-//Thread.sleep(2000);
-//driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
-//Thread.sleep(2000);
-//driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
-//Thread.sleep(2000);
-//driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
-//Thread.sleep(2000);
-//driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys("560");        
-//Thread.sleep(2000);
+       //set the value to 820 to get the Total Recurring Reimbursement for all patients
+        driver.findElement(By.xpath("//input[@id=':r0:']")).click(); 
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys(Keys.BACK_SPACE);  
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//input[@id=':r0:']")).sendKeys("820");        
+        Thread.sleep(2000);
 
         // Scroll down 
         js.executeScript("window.scrollBy(0, 400);");
@@ -86,9 +98,6 @@ Thread.sleep(2000);
         WebElement finalElement = driver.findElement(By.xpath("/html/body/div[2]/div[1]/div[2]/div[8]/label/span[1]/input"));
         finalElement.click();
         Thread.sleep(4000);
-
-        // Final scroll
-       // js.executeScript("window.scrollBy(0, 100);");
 
         // Close the driver
        // driver.quit();
